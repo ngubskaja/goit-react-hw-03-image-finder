@@ -33,11 +33,11 @@ export class App extends Component {
            images: [...prevState.images, ...res.hits],
            status: 'finished'
          }));
-      }
-     catch (error) {
+         
+      }catch (error) {
            toast.error('Oops! Something went wrong! Please try again.');
            }
-           this.setState({ status: 'idle' });
+          
   }
   }
 
@@ -64,7 +64,7 @@ export class App extends Component {
 
   render() {
     const { images, status, modalImg } = this.state;
-    console.log({images});
+
     return (
       <div>
         <Searchbar onSubmit={this.handleSubmit} />
